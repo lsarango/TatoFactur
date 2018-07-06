@@ -39,7 +39,7 @@ public class IniciarSesion extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        ingressar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
 
@@ -52,13 +52,15 @@ public class IniciarSesion extends javax.swing.JFrame {
         jpIngreso.setInheritsPopupMenu(true);
         jpIngreso.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("INICIAR SESIÓN");
         jpIngreso.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 230, -1));
 
         jLabel2.setBackground(new java.awt.Color(255, 51, 204));
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Contraseña:");
         jpIngreso.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
 
@@ -85,15 +87,22 @@ public class IniciarSesion extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/clave-de-seguridad-simbolo-de-interfaz-de-silueta-de-la-herramienta-de-la-contrasena.png"))); // NOI18N
         jpIngreso.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, 40));
 
-        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Usuario:");
         jpIngreso.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jButton1.setText("Ingresar");
-        jpIngreso.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 370, -1, -1));
+        ingressar.setBackground(new java.awt.Color(0, 0, 0));
+        ingressar.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        ingressar.setForeground(new java.awt.Color(255, 255, 255));
+        ingressar.setText("Ingresar");
+        ingressar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ingressarActionPerformed(evt);
+            }
+        });
+        jpIngreso.add(ingressar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, -1, -1));
 
         getContentPane().add(jpIngreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 420));
 
@@ -107,6 +116,14 @@ public class IniciarSesion extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ingressarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingressarActionPerformed
+        this.dispose();
+        new VistaPrincipal(this, true);
+        
+        
+        // TODO add your thandling code here:
+    }//GEN-LAST:event_ingressarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,7 +160,7 @@ public class IniciarSesion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton ingressar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
